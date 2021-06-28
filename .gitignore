@@ -1,0 +1,13 @@
+.vs/
+*.dll
+*.pdb
+*.cache
+*.targets
+Features/obj/
+Features.Tests/obj/
+Features.Tests/bin/
+Demo.Tests/bin/
+Demo.Tests/obj/
+Demo/bin/
+Demo/obj/
+Features/bin/
