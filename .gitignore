@@ -12,3 +12,9 @@ Demo/bin/
 Demo/obj/
 Features/bin/
 Features.Tests/Properties/
+02 - TDD/tests/NerdStore.Vendas.Application.Tests/bin/
+02 - TDD/tests/NerdStore.Vendas.Application.Tests/obj/
+02 - TDD/tests/NerdStore.Vendas.Domain.Tests/bin/
+02 - TDD/src/NerdStore.Vendas.Domain/obj/
+02 - TDD/tests/NerdStore.Vendas.Domain.Tests/obj/
+02 - TDD/src/NerdStore.Vendas.Domain/bin/
