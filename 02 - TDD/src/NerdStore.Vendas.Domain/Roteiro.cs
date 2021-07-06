@@ -34,7 +34,7 @@
 
             4 - Aplicar voucher de desconto
                 4.1 - O voucher só pode ser aplicado se estiver válido, para isto:
-                    4.1.1 - Deve possuir um código            
+                    4.1.1 - Deve possuir um código
                     4.1.2 - A data de validade é superior a data atual
                     4.1.3 - O voucher está ativo
                     4.1.4 - O voucher possui quantidade disponivel

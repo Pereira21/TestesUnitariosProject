@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NerStore.Core.DomainObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,6 +7,9 @@ namespace NerdStore.Vendas.Domain
 {
     public class Pedido
     {
+        public static int MAX_UNIDADES_ITEM => 15;
+        public static int MIN_UNIDADES_ITEM => 1;
+
         protected Pedido()
         {
             _pedidoItems = new List<PedidoItem>();
@@ -17,19 +21,38 @@ namespace NerdStore.Vendas.Domain
         private readonly List<PedidoItem> _pedidoItems;
         public IReadOnlyCollection<PedidoItem> PedidoItems => _pedidoItems;
 
-        public void CalcularValorPedido()
+        private void CalcularValorPedido()
         {
             ValorTotal = PedidoItems.Sum(i => i.CalcularValor());
         }
 
+        private bool PedidoItemExistente(PedidoItem item)
+        {
+            return _pedidoItems.Any(p => p.ProdutoId == item.ProdutoId);
+        }
+
+        private void ValidarQuantidadeItemPermtiida(PedidoItem item)
+        {
+            var quantidadeItems = item.Quantidade;
+            if (PedidoItemExistente(item))
+            {
+                var itemExistente = _pedidoItems.FirstOrDefault(p => p.ProdutoId == item.ProdutoId);
+                quantidadeItems += itemExistente.Quantidade;
+            }
+
+            if (quantidadeItems > MAX_UNIDADES_ITEM) throw new DomainException($"Máximo de {Pedido.MAX_UNIDADES_ITEM} por produto!");
+        }
+
         public void AdicionarItem(PedidoItem pedidoItem)
         {
-            if (_pedidoItems.Any(p => p.ProdutoId == pedidoItem.ProdutoId))
+            ValidarQuantidadeItemPermtiida(pedidoItem);
+
+            if (PedidoItemExistente(pedidoItem))
             {
                 var itemExistente = _pedidoItems.FirstOrDefault(p => p.ProdutoId == pedidoItem.ProdutoId);
+
                 itemExistente.AdicionarUnidades(pedidoItem.Quantidade);
                 pedidoItem = itemExistente;
-
                 _pedidoItems.Remove(itemExistente);
             }
 
