@@ -1,4 +1,5 @@
 ﻿using FluentValidation.Results;
+using NerdStore.Core.DomainObjects;
 using NerdStore.Vendas.Domain.Enums;
 using NerStore.Core.DomainObjects;
 using System;
@@ -7,7 +8,7 @@ using System.Linq;
 
 namespace NerdStore.Vendas.Domain
 {
-    public class Pedido
+    public class Pedido : Entity, IAggregateRoot
     {
         public static int MAX_UNIDADES_ITEM => 15;
         public static int MIN_UNIDADES_ITEM => 1;
