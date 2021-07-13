@@ -61,7 +61,7 @@ namespace NerdStore.Vendas.Domain
             Desconto = desconto;
         }
 
-        private bool PedidoItemExistente(PedidoItem item)
+        public bool PedidoItemExistente(PedidoItem item)
         {
             return _pedidoItems.Any(p => p.ProdutoId == item.ProdutoId);
         }
