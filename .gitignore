@@ -24,3 +24,13 @@ Features.Tests/Properties/
 02 - TDD/src/NerdStore.Vendas.Application/obj/
 02 - TDD/src/NerdStore.Vendas.Application/bin/
 02 - TDD/src/NerdStore.Vendas.Data/bin/
+03 - Testes de Integraçao/src/NerdStore.Catalogo.Application/bin/
+03 - Testes de Integraçao/src/NerdStore.Catalogo.Application/obj/
+03 - Testes de Integraçao/src/NerdStore.Catalogo.Data/obj/
+03 - Testes de Integraçao/src/NerdStore.Catalogo.Data/bin/
+03 - Testes de Integraçao/src/NerdStore.Catalogo.Domain/bin/
+03 - Testes de Integraçao/src/NerdStore.Catalogo.Domain/obj/
+03 - Testes de Integraçao/tests/NerdStore.WebApp.Tests/bin/
+NerdStore.WebApp.MVC/obj/
+NerdStore.WebApp.MVC/bin/
+03 - Testes de Integraçao/tests/NerdStore.WebApp.Tests/obj/
