@@ -34,3 +34,11 @@ Features.Tests/Properties/
 NerdStore.WebApp.MVC/obj/
 NerdStore.WebApp.MVC/bin/
 03 - Testes de Integraçao/tests/NerdStore.WebApp.Tests/obj/
+01 - Testes de Unidade/Demo.Tests/bin/
+01 - Testes de Unidade/Demo.Tests/obj/
+01 - Testes de Unidade/Demo/bin/
+01 - Testes de Unidade/Demo/obj/
+01 - Testes de Unidade/Features.Tests/bin/
+01 - Testes de Unidade/Features.Tests/obj/
+01 - Testes de Unidade/Features/bin/
+01 - Testes de Unidade/Features/obj/
